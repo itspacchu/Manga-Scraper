@@ -101,7 +101,7 @@ def fuckit(name:str,chapter:int=1):
         req.add_header('Referer', 'https://mangakakalot.com/')
         with urllib.request.urlopen(req) as response:
            html = response.read()
-        file=open(f'{name}/{chapter}/{count}.jpg','wb')
+        file=open(f'{name}/{chapter}/{name}_{chapter}-{count}.jpg','wb')
         file.write(html)
         file.close()
         print('>',end='')
